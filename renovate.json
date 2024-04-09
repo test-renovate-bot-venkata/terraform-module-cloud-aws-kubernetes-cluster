@@ -225,7 +225,7 @@
       "extractVersionTemplate": "(?<version>.*)$",
       "datasourceTemplate": "github-tags",
       "depNameTemplate": "glueops/codespaces"
-    },
+    }
   ],
   "packageRules": [
     {
