@@ -213,7 +213,19 @@
       ],
       "depNameTemplate": "kube-prometheus-stack",
       "datasourceTemplate": "helm"
-    }
+    },
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "^.github/workflows/aws-cloud-regression-suite\\.yml$"
+      ],
+      "matchStrings": [
+        "ghcr.io/glueops/codespaces:(?<currentValue>\\d+\\.\\d+\\.\\d+)\\s*"
+      ],
+      "extractVersionTemplate": "(?<version>.*)$",
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "glueops/codespaces"
+    },
   ],
   "packageRules": [
     {
